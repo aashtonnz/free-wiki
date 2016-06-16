@@ -18,7 +18,8 @@
         <b><a href="/u/{{edit.author}}">{{edit.author}}</a></b>
       </div>
       <br>
-      <div style="font-family: Lucida Console, Monaco, monospace; font-size: 90%">
+      <div style="font-family: Lucida Console, Monaco, monospace; font-size: 
+                90%">
         {% for line in edit.content.split('\n') %}
           {% for section in line.split('  ') %}
             {{section}}&nbsp;
