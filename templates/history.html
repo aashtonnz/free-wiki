@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}w/<a href="/w/{{wiki}}">{{wiki}}</a>{% endblock %}
+{% block header %}w/<a href="/w/{{wiki}}">{{wiki}}</a>{% endblock %}
+{% block subheader %} |
+<a href="/history/{{wiki}}">history</a> -
+<a href="/edit/{{wiki}}">edit</a>
+{% endblock %}
+
+{% block content %}
+{% for edit in edits %}
+  <div>
+    <div>
+      <b>{{edit.created.strftime("%d %b %y at %H:%M")}}</b> by
+      <b><a href="/u/{{edit.author}}">{{edit.author}}</a></b>
+    </div>
+    <br>
+    <div style="font-family: Lucida Console, Monaco, monospace; font-size: 90%">
+    {% for line in edit.content.split('\n') %}
+      {% for section in line.split('  ') %}
+        {{section}}&nbsp;
+      {% endfor %}
+      <br>
+    {% endfor %}
+    <br>
+    </div>
+    <div>
+      <a href="/edit/{{edit.wiki}}?v={{edit.version}}">edit</a> -
+      <a href="/w/{{edit.wiki}}?v={{edit.version}}">view</a>
+    </div>
+    <hr>
+  </div>
+{% endfor %}
+{% endblock %}

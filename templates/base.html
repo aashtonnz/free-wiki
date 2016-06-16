@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>free-wiki/{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+    <h1><a href="/"><img style="vertical-align: middle" src="/images/free-wiki.jpg" alt="free-wiki" width="71px" height="40px"></a>
+free-wiki/{% block header %}{% endblock %}</h1>
+    <a href="/">home</a> -
+    <a href="/index">index</a> -
+    <a href="/users">users</a>
+    {% block subheader %}{% endblock %}
+    <span style="float:right;">
+      {% if logged %}
+      <a href="/logout">logout</a>
+      {% else %}
+      <a href="/signup">signup</a> or <a href="/login">login</a>
+      {% endif %}      
+    </span>
+    <hr>
+
+    <style type="text/css">
+      * {
+      font-family: Verdana, Geneva, sans-serif;
+      size: 100%
+      }
+      
+      textarea {
+      font-family: "Lucida Console", Monaco, monospace;
+      font-size: 90%
+      }
+
+      .label {
+      text-align: right
+      }
+      
+      .error {
+      color: red
+      }
+    </style>
+
+    {% block content %}
+    {% endblock %}
+  </body>
+
+</html>

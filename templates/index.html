@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}index{% endblock %}
+{% block header %}index{% endblock %}
+{% block subheaders %}
+Hello
+{% endblock %}
+
+{% block content %}
+{% for wiki in index %}
+<div><a href="/w/{{wiki.name}}">{{wiki.name}}</a></div>
+{% endfor %}
+{% endblock %}
