@@ -1,28 +1,29 @@
 {% extends "base.html" %}
 
 {% block title %}w/<a href="/w/{{wiki}}">{{wiki}}</a>{% endblock %}
+
 {% block header %}w/<a href="/w/{{wiki}}">{{wiki}}</a>{% endblock %}
-{% block subheader %} |
-<a href="/history/{{wiki}}">history</a> -
-<a href="/edit/{{wiki}}">edit</a>
+
+{% block subheader %}
+| <a href="/history/{{wiki}}">history</a> - <a href="/edit/{{wiki}}">edit</a>
 {% endblock %}
 
 {% block content %}
-<div>
-  Edit HTML below:
-</div>
-<br>
-
-<form method="post">
-  <label>
-    <textarea name="content" style="width: 99%" rows="27">{{content}}</textarea>
-    <div>
-  </label>
-
   <div>
-    <br>
-    <input type="submit">
+    Edit HTML below:
   </div>
-</form>
+  <br>
+
+  <form method="post">
+    <label>
+      <textarea name="content" style="width: 99%"
+                rows="27">{{content}}</textarea>
+    </label>
+
+    <div>
+      <br>
+      <input type="submit">
+    </div>
+  </form>
 {% endblock %}
 
