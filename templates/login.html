@@ -1,35 +1,38 @@
 {% extends "base.html" %}
 
 {% block title %}login{% endblock %}
+
 {% block header %}login{% endblock %}
+
 {% block content %}
-<h3>Login</h3>
-<form method="post">
-  <table>
-    <tr>
-      <td class="label">
-        Username
-      </td>
-      <td>
-        <input type="text" name="username" value={{username}}>
-      </td>
-    </tr>
+  <h3>Login</h3>
+  
+  <form method="post">
+    <table>
+      <tr>
+        <td class="label">
+          Username
+        </td>
+        <td>
+          <input type="text" name="username" value={{username}}>
+        </td>
+      </tr>
 
-    <tr>
-      <td class="label">
-        Password
-      </td>
-      <td>
-        <input type="password" name="password" value={{password}}>
-      </td>
-    </tr>
-    
-  </table>
+      <tr>
+        <td class="label">
+          Password
+        </td>
+        <td>
+          <input type="password" name="password" value={{password}}>
+        </td>
+      </tr>
+      
+    </table>
 
-  <p class="error">
-    {{login_error}}
-  </p>
+    <p class="error">
+      {{login_error}}
+    </p>
 
-  <input type="submit">
-</form>
+    <input type="submit">
+  </form>
 {% endblock %}
