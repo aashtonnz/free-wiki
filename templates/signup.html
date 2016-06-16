@@ -1,63 +1,64 @@
 {% extends "base.html" %}
 
 {% block title %}signup{% endblock %}
+
 {% block header %}signup{% endblock %}
 
 {% block content %}
-<h3>Signup</h3>
-<form method="post">
-  <table>
-    <tr>
-      <td class="label">
-        Username
-      </td>
-      <td>
-        <input type="text" name="username" value="">
-      </td>
-      <td class="error">
-        {{username_error}}  
-      </td>
-    </tr>
-
-    <tr>
-      <td class="label">
-        Password
-      </td>
-      <td>
-        <input type="password" name="password" value="">
-      </td>
-      <td class="error">
-        {{password_error}}
-      </td>
-    </tr>
-
-    <tr>
-      <td class="label">
-        Verify Password
-      </td>
-      <td>
-        <input type="password" name="verify" value="">
-      </td>
-      <td class="error">
-        {{verify_error}}
-      </td>
-    </tr>
-
-    <tr>
-      <td class="label">
-        Email (optional)
-      </td>
-      <td>
-        <input type="text" name="email" value="">
-      </td>
-      <td class="error">
-        {{email_error}}
-      </td>
-    </tr>
-  </table>
-  <br>
+  <h3>Signup</h3>
   
-  <input type="submit">
-</form>
-</body>
+  <form method="post">
+    <table>
+      <tr>
+        <td class="label">
+          Username
+        </td>
+        <td>
+          <input type="text" name="username" value="">
+        </td>
+        <td class="error">
+          {{username_error}}  
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">
+          Password
+        </td>
+        <td>
+          <input type="password" name="password" value="">
+        </td>
+        <td class="error">
+          {{password_error}}
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">
+          Verify Password
+        </td>
+        <td>
+          <input type="password" name="verify" value="">
+        </td>
+        <td class="error">
+          {{verify_error}}
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">
+          Email (optional)
+        </td>
+        <td>
+          <input type="text" name="email" value="">
+        </td>
+        <td class="error">
+          {{email_error}}
+        </td>
+      </tr>
+    </table>
+    <br>
+    
+    <input type="submit">
+  </form>
 {% endblock %}
