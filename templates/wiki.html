@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
 {% block title %}w/<a href="/w/{{edit.wiki}}">{{edit.wiki}}</a>{% endblock %}
+
 {% block header %}w/<a href="/w/{{edit.wiki}}">{{edit.wiki}}</a>{% endblock %}
-{% block subheader %} |
-<a href="/history/{{edit.wiki}}">history</a> -
-<a href="/edit/{{edit.wiki}}">edit</a> |
-{{edit.created.strftime("%d %b %y at %H:%M")}} by {{edit.author}}
+
+{% block subheader %}
+  |
+  <a href="/history/{{edit.wiki}}">history</a> -
+  <a href="/edit/{{edit.wiki}}">edit</a> |
+  {{edit.created.strftime("%d %b %y at %H:%M")}} by {{edit.author}}
 {% endblock %}
 
 {% block content %}
-{{edit.content|safe}}
+  {{edit.content|safe}}
 {% endblock %}
-
