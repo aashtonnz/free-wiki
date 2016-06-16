@@ -304,6 +304,6 @@ app = webapp2.WSGIApplication([('/', MainPage),
                                (r'/edit/(%s)' % WIKI_RE, EditPage),
                                (r'/history/(%s)' % WIKI_RE, HistoryPage),
                                (r'/w/(%s)' % WIKI_RE, WikiPage),
-                               (r'/u/(%s)' % USER_RE, UserPage), # USER_RE!
+                               (r'/u/(%s)' % USER_RE, UserPage),
                                (r'/.*', NotFoundPage)],
                               debug=DEBUG)        
