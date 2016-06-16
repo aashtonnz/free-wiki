@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}users{% endblock %}
+
 {% block header %}users{% endblock %}
-{% block subheaders %}
-Hello
-{% endblock %}
 
 {% block content %}
-{% for user in users %}
-<div><a href="/u/{{user.username}}">{{user.username}}</a></div>
-{% endfor %}
+  {% for user in users %}
+    <div><a href="/u/{{user.username}}">{{user.username}}</a></div>
+  {% endfor %}
 {% endblock %}
